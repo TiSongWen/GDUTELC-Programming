@@ -1,0 +1,114 @@
+* {
+    font: 100 48px 'Microsoft YaHei';
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: none;
+}
+
+.fallback-message {
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+b {
+    font-weight: bold;
+}
+
+em {
+    color: #fc4545;
+}
+
+img {
+    height: 250px;
+}
+
+.step {
+    line-height: 1.5;
+
+    position: relative;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 900px;
+    margin: 20px auto;
+    padding: 40px;
+
+    text-align: center;
+    letter-spacing: 2px;
+
+    color: rgb(80, 80, 80);
+}
+
+.impress-enabled .step {
+    margin: 0;
+
+    -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+
+    opacity: .3;
+}
+
+.impress-enabled .step.active {
+    opacity: 1;
+}
+
+.whoAmI p {
+    font: 60px 'arial';
+}
+
+.me img {
+    width: 250px;
+}
+
+.me p {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.me p.name {
+    font-size: 60px;
+}
+
+.howToBe .rotating {
+    display: inline-block;
+
+    -webkit-transition: .5s;
+            transition: .5s;
+}
+
+.howToBe.present .rotating {
+    -webkit-transition-delay: .25s;
+            transition-delay: .25s;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+}
+
+img.mengbi {
+    margin-top: 15px;
+}
+
+.gay img {
+    width: 250px;
+}
+
+.end p {
+    font: 80px 'arial';
+}
