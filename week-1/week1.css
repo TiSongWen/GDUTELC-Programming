@@ -1,0 +1,427 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Crimson Text', georgia, times, serif;
+    font-size: 2em;
+    line-height: 1.3;
+
+    background: rgb(215, 215, 215);
+    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+
+    user-select: none;
+    font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+
+i, em { font-style: italic}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.3);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    transition: 0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+a.cognifide {
+    display: block;
+    width: 200px;
+    background: none;
+    margin: 20px auto 0;
+}
+
+code {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+code.snippet {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.5);
+}
+
+code.snippet .disabled {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+code.snippet .indent { white-space: pre; }
+
+code.snippet .comment { font-size: 0.8em; color: #777; }
+
+/*li substep */
+li.future{
+	opacity: 0;
+}
+li.present{
+	opacity: 1;
+}
+li.past{
+	opacity: 0.6;
+}
+/* img substep */
+img.future{
+	opacity: 0;
+}
+img.present{
+	opacity: 1;
+}
+img.past{
+	opacity: 0;
+}
+/* span substep */
+span.future{
+	opacity: 0.2;
+}
+span.present{
+	opacity: 1;
+}
+span.present{
+	opacity: 0.2;
+}
+
+span.hidden.future{
+	opacity: 0.2;
+}
+span.present{
+	opacity: 1;
+}
+
+.step {
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    
+    transition: 1s;
+}
+
+div.step.hidden.past{
+	opacity: 0.05;
+}
+div.step.hidden.future{
+	opacity: 0.1;
+}
+.substep.hidden.future{
+	opacity: 0;
+}
+.substep.hidden.present{
+	opacity: 1;
+}
+
+.little.past{
+	opacity: 0.2;
+}
+
+.step h3 {
+    font-size: 2.5em;
+    text-transform: lowercase;
+    margin-bottom: 0.2em;
+}
+
+.step ul {
+    font-size: 1.2em;
+}
+
+.step ul li { margin-bottom: 0.1em }
+
+.step ul li:before {
+    content: "*";
+    text-shadow: 0 0 5px rgba(50,50,50,0.7);
+    color: transparent;
+    margin-right: 0.5em;
+}
+
+.step p {
+	padding: 30px 0 60px 30px;
+}
+
+.step ul b { font-size: 1.1em }
+
+
+@keyframes rotate-h1 {
+        0%   { transform: perspective(1000px) rotateY(-10deg); }
+        100% { transform: perspective(1000px) rotateY(10deg); }
+}
+
+#title h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 6em;
+    line-height: 1;
+
+    transform-style: preserve-3d;
+    animation: rotate-h1 2s infinite alternate ease-in-out;
+
+    transform: perspective(1000px) rotateY(0deg);
+
+    transition: all 2s ease-in-out;
+}
+
+#title h1 .short {
+    text-transform: lowercase;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.27em;
+
+    transform: translateZ(-50px);
+}
+
+#title h1 .d3 {
+    display: inline-block;
+    transform: translateZ(20px);
+}
+
+#title h1 .transforms {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.6em;
+    transform: translateY(-0.6em) translateZ(50px);
+}
+
+#title .author {
+    display: block;
+    width: 400px;
+    margin: -70px auto 0;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#title.active .author {
+    opacity: 1;
+}
+
+
+
+
+.sideFace{
+	width: 800px;
+	height: 600px;
+	background-color: rgba(247, 247, 247, 0.76);
+}
+
+.topFace{
+	width: 800px;
+	height: 800px;
+	background: #f2f2f2;
+	border-radius:22px;
+	box-shadow: 0 0 30px black;
+	padding: 20px;
+}
+
+.whiteFace{
+	width: 800px;
+	height: 600px;
+	
+}
+
+.boxFace{
+	width: 800px;
+	height: 600px;
+	background: #f2f2f2;
+	border-radius:22px;
+	box-shadow: 0 0 30px black;
+	padding: 20px;
+}
+div.sideFace h1, div.boxFace h1{
+	padding: 56px 219px 10px 86px;
+	font-weight: bold;
+	font-size: 57px;
+	margin-bottom: 30px;
+	color: #1c94c4;
+}
+
+
+div.sideFace hr{
+	padding: 0 20px 0 30px;
+	border: 2px;
+}
+
+div.sideFace p{
+	
+	line-height: 2;
+}
+
+div.content{
+	opacity: 1;
+}
+
+
+div.codeContent {
+	width: 500px;
+}
+
+div.sideFace h1.main{
+	padding: 200px 219px 10px 120px;
+	font-weight: bold;
+	font-size: 57px;
+	margin-bottom: 30px;
+	color: #1c94c4;
+}
+
+h2.title{
+	font-size: 1.25em;
+	text-transform: lowercase;
+	text-shadow: 2px 2px 10px rgba(50,50,50,.8);
+	padding: 110px 0 50px 204px;
+	color: #A00ADC;
+}
+
+h2.italic  {
+    font-size: 1.5em;
+    text-transform: lowercase;
+    # color: transparent;
+    text-shadow: 2px 2px 10px rgba(50,50,50,.8);
+    
+    position: absolute;
+
+    transform-origin: 100% 100%;
+    transform: translate(33%, 15%) rotate(-43deg);
+    color: #A00ADC;
+}
+
+h2.title2{
+	font-size: 1.25em;
+	font-weight: bold;
+	text-transform: lowercase;
+	
+	padding: 20px 0 0 30px;
+	color: #1c94c4;
+}
+
+p.title{
+	font-size: 50px;
+	text-align: center;
+	padding: 30px;
+	font-weight: bold;
+	color: #1c94c4;
+}
+
+p.content{
+	font-size: 30px;
+	line-height: 1.5;
+}
+
+h2.sec{
+	font-size: 1.25em;
+	text-transform: lowercase;
+	text-shadow: 2px 2px 10px rgba(50,50,50,.8);
+}
+
+.yaHei{
+	font-family: 微软雅黑;
+}
+
+h2.algor{
+	font-family: 微软雅黑;
+	font-size: 43px;
+	font-weight: bold;
+	padding: 30px 0 0 30px;
+	color: #A154DA;
+}
+
+
+
+div.boxFace p{
+	padding-left: 30px;
+	line-height: 1.5;
+}
+
+pre.code{
+	font-size: 25px;
+	line-height: 1.5;
+	tab-size: 4;
+	margin: 24px 0 0 -65px;
+	height: 280px;
+}
+
+span.number{
+	border: solid 2px;
+	padding: 5px;
+}
+
+span.numBlue{
+	border: solid 2px;
+	padding: 5px;
+	color: #4293B3;
+}
+
+span.numPink{
+	border: solid 2px;
+	padding: 5px;
+	color: #B961DC;
+}
+
+span.numRed{
+	border: solid 2px;
+	padding: 5px;
+	color: #DE3838;
+}
+
+span.title{
+	font-size: 40px;
+	font-weight: bold;
+	color: #1c94c4;
+	
+	display: block;
+}
+
+p.content{
+
+}
