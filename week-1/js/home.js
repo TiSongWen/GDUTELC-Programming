@@ -29,7 +29,7 @@
 
     content.className = 'content';
 
-    title.innerHTML = 'GDUT-ELC';
+    title.innerHTML = 'GDUT ELC';
     header.appendChild(title);
 
     introduction.innerHTML = 'NO QUEST NO GAIN';
